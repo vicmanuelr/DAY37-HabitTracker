@@ -50,4 +50,10 @@ def post_pixel(auth_headers: dict, quantity: int):
     print(response.text)
 
 
-post_pixel(PIXELA_HEADER, int(input("How many minutes did you study today? ")))
+while True:
+    try:
+        post_pixel(PIXELA_HEADER, int(input("How many minutes did you study today? ")))
+    except ValueError:
+        print("Please enter value in integer for minutes coding")
+    else:
+        break
