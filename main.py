@@ -50,4 +50,4 @@ def post_pixel(auth_headers: dict, quantity: int):
     print(response.text)
 
 
-post_pixel(PIXELA_HEADER, 50)
+post_pixel(PIXELA_HEADER, int(input("How many minutes did you study today? ")))
